@@ -57,7 +57,7 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::apiResource('donations', DonationController::class);
 
     // Events
-    Route::apiResource('events', EventController::class);
+    Route::apiResource('events', EventController::class)->except('index');
 
     // Listens
     Route::apiResource('listens', ListenController::class);
@@ -72,14 +72,21 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::apiResource('news', NewsController::class);
 
     // Pastors
-    Route::apiResource('pastors', PastorController::class);
+    Route::apiResource('pastors', PastorController::class)->except('index');
 
     // Programmations
-    Route::apiResource('programmations', ProgrammationController::class);
+    Route::apiResource('programmations', ProgrammationController::class)->except('index');
 
     // Services
-    Route::apiResource('services', ServiceController::class);
+    Route::apiResource('services', ServiceController::class)->except('index');
 
     // Time Slots
     Route::apiResource('time-slots', TimeSlotController::class);
 });
+
+// PUBLIC ROUTES
+Route::apiResource('events', EventController::class)->only('index');
+Route::apiResource('pastors', PastorController::class)->only('index');
+Route::apiResource('programmations', ProgrammationController::class)->only('index');
+Route::apiResource('services', ServiceController::class)->only('index');
+

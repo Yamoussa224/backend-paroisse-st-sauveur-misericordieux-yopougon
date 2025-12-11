@@ -376,7 +376,7 @@ endpoints:
         name: email_verified_at
         description: 'Must be a valid date.'
         required: false
-        example: '2025-12-08T17:00:01'
+        example: '2025-12-11T10:38:26'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -390,7 +390,7 @@ endpoints:
       status: ENABLE
       photo: smsjuryvojcybzvrbyick
       role: ADMIN
-      email_verified_at: '2025-12-08T17:00:01'
+      email_verified_at: '2025-12-11T10:38:26'
     fileParameters: []
     responses: []
     responseFields: []
@@ -574,7 +574,7 @@ endpoints:
         name: email_verified_at
         description: 'Must be a valid date.'
         required: false
-        example: '2025-12-08T17:00:01'
+        example: '2025-12-11T10:38:26'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -588,7 +588,7 @@ endpoints:
       status: ENABLE
       photo: smsjuryvojcybzvrbyick
       role: ADMIN
-      email_verified_at: '2025-12-08T17:00:01'
+      email_verified_at: '2025-12-11T10:38:26'
     fileParameters: []
     responses: []
     responseFields: []
@@ -775,7 +775,7 @@ endpoints:
         name: donation_at
         description: 'Must be a valid date.'
         required: true
-        example: '2025-12-08T17:00:01'
+        example: '2025-12-11T10:38:26'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -788,7 +788,7 @@ endpoints:
       paymethod: xbajwbpilpmufinllwloa
       paytransaction: uydlsmsjuryvojcybzvrb
       description: 'Dolores dolorum amet iste laborum eius est dolor.'
-      donation_at: '2025-12-08T17:00:01'
+      donation_at: '2025-12-11T10:38:26'
     fileParameters: []
     responses: []
     responseFields: []
@@ -957,7 +957,7 @@ endpoints:
         name: donation_at
         description: 'Must be a valid date.'
         required: false
-        example: '2025-12-08T17:00:01'
+        example: '2025-12-11T10:38:26'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -970,7 +970,7 @@ endpoints:
       paymethod: xbajwbpilpmufinllwloa
       paytransaction: uydlsmsjuryvojcybzvrb
       description: 'Dolores dolorum amet iste laborum eius est dolor.'
-      donation_at: '2025-12-08T17:00:01'
+      donation_at: '2025-12-11T10:38:26'
     fileParameters: []
     responses: []
     responseFields: []
@@ -1024,48 +1024,6 @@ endpoints:
   -
     custom: []
     httpMethods:
-      - GET
-    uri: api/events
-    metadata:
-      custom: []
-      groupName: Endpoints
-      groupDescription: ''
-      subgroup: ''
-      subgroupDescription: ''
-      title: ''
-      description: ''
-      authenticated: false
-      deprecated: false
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters: []
-    cleanUrlParameters: []
-    queryParameters: []
-    cleanQueryParameters: []
-    bodyParameters: []
-    cleanBodyParameters: []
-    fileParameters: []
-    responses:
-      -
-        custom: []
-        status: 404
-        content: |-
-          {
-              "message": "The route Lunion-Lab/paroisse-st-sauveur-backend/public/api/events could not be found."
-          }
-        headers:
-          cache-control: 'no-cache, private'
-          content-type: application/json
-        description: null
-    responseFields: []
-    auth: []
-    controller: null
-    method: null
-    route: null
-  -
-    custom: []
-    httpMethods:
       - POST
     uri: api/events
     metadata:
@@ -1102,7 +1060,7 @@ endpoints:
         name: date_at
         description: 'Must be a valid date.'
         required: true
-        example: '2025-12-08T17:00:01'
+        example: '2025-12-11T10:38:26'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -1154,7 +1112,7 @@ endpoints:
         deprecated: false
     cleanBodyParameters:
       title: vmqeopfuudtdsufvyvddq
-      date_at: '2025-12-08T17:00:01'
+      date_at: '2025-12-11T10:38:26'
       time_at: consequatur
       location_at: mqeopfuudtdsufvyvddqa
       description: 'Dolores dolorum amet iste laborum eius est dolor.'
@@ -1272,7 +1230,7 @@ endpoints:
         name: date_at
         description: 'Must be a valid date.'
         required: false
-        example: '2025-12-08T17:00:01'
+        example: '2025-12-11T10:38:26'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -1324,7 +1282,7 @@ endpoints:
         deprecated: false
     cleanBodyParameters:
       title: vmqeopfuudtdsufvyvddq
-      date_at: '2025-12-08T17:00:01'
+      date_at: '2025-12-11T10:38:26'
       location_at: amniihfqcoynlazghdtqt
       description: 'Dolores dolorum amet iste laborum eius est dolor.'
       image: dtdsufvyvddqamniihfqc
@@ -1503,7 +1461,7 @@ endpoints:
         name: listen_at
         description: 'Must be a valid date.'
         required: true
-        example: '2025-12-08T17:00:01'
+        example: '2025-12-11T10:38:26'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -1515,7 +1473,7 @@ endpoints:
       phone: qxbajwbpilpmufinllwlo
       message: consequatur
       time_slot_id: 17
-      listen_at: '2025-12-08T17:00:01'
+      listen_at: '2025-12-11T10:38:26'
     fileParameters: []
     responses: []
     responseFields: []
@@ -1673,7 +1631,7 @@ endpoints:
         name: listen_at
         description: 'Must be a valid date.'
         required: false
-        example: '2025-12-08T17:00:01'
+        example: '2025-12-11T10:38:26'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -1685,7 +1643,7 @@ endpoints:
       phone: qxbajwbpilpmufinllwlo
       message: consequatur
       time_slot_id: 17
-      listen_at: '2025-12-08T17:00:01'
+      listen_at: '2025-12-11T10:38:26'
     fileParameters: []
     responses: []
     responseFields: []
@@ -1817,7 +1775,7 @@ endpoints:
         name: date_at
         description: 'Must be a valid date.'
         required: true
-        example: '2025-12-08T17:00:01'
+        example: '2025-12-11T10:38:26'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -1861,7 +1819,7 @@ endpoints:
         deprecated: false
     cleanBodyParameters:
       title: vmqeopfuudtdsufvyvddq
-      date_at: '2025-12-08T17:00:01'
+      date_at: '2025-12-11T10:38:26'
       author: amniihfqcoynlazghdtqt
       category: qxbajwbpilpmufinllwlo
       mediation_status: draft
@@ -1978,7 +1936,7 @@ endpoints:
         name: date_at
         description: 'Must be a valid date.'
         required: false
-        example: '2025-12-08T17:00:01'
+        example: '2025-12-11T10:38:26'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -2022,7 +1980,7 @@ endpoints:
         deprecated: false
     cleanBodyParameters:
       title: vmqeopfuudtdsufvyvddq
-      date_at: '2025-12-08T17:00:01'
+      date_at: '2025-12-11T10:38:26'
       author: amniihfqcoynlazghdtqt
       category: qxbajwbpilpmufinllwlo
       mediation_status: draft
@@ -2226,7 +2184,7 @@ endpoints:
         name: date_at
         description: 'Must be a valid date.'
         required: true
-        example: '2025-12-08T17:00:01'
+        example: '2025-12-11T10:38:26'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -2251,7 +2209,7 @@ endpoints:
       message: consequatur
       request_status: pending
       amount: 56
-      date_at: '2025-12-08T17:00:01'
+      date_at: '2025-12-11T10:38:26'
       time_at: consequatur
     fileParameters: []
     responses: []
@@ -2435,7 +2393,7 @@ endpoints:
         name: date_at
         description: 'Must be a valid date.'
         required: false
-        example: '2025-12-08T17:00:01'
+        example: '2025-12-11T10:38:26'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -2460,7 +2418,7 @@ endpoints:
       message: consequatur
       request_status: pending
       amount: 56
-      date_at: '2025-12-08T17:00:01'
+      date_at: '2025-12-11T10:38:26'
     fileParameters: []
     responses: []
     responseFields: []
@@ -2628,7 +2586,7 @@ endpoints:
         name: published_at
         description: 'Must be a valid date.'
         required: true
-        example: '2025-12-08T17:00:01'
+        example: '2025-12-11T10:38:26'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -2639,7 +2597,7 @@ endpoints:
       author: amniihfqcoynlazghdtqt
       category: qxbajwbpilpmufinllwlo
       new_status: draft
-      published_at: '2025-12-08T17:00:01'
+      published_at: '2025-12-11T10:38:26'
     fileParameters: []
     responses: []
     responseFields: []
@@ -2789,7 +2747,7 @@ endpoints:
         name: published_at
         description: 'Must be a valid date.'
         required: false
-        example: '2025-12-08T17:00:01'
+        example: '2025-12-11T10:38:26'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -2800,7 +2758,7 @@ endpoints:
       author: amniihfqcoynlazghdtqt
       category: qxbajwbpilpmufinllwlo
       new_status: draft
-      published_at: '2025-12-08T17:00:01'
+      published_at: '2025-12-11T10:38:26'
     fileParameters: []
     responses: []
     responseFields: []
@@ -2854,48 +2812,6 @@ endpoints:
   -
     custom: []
     httpMethods:
-      - GET
-    uri: api/pastors
-    metadata:
-      custom: []
-      groupName: Endpoints
-      groupDescription: ''
-      subgroup: ''
-      subgroupDescription: ''
-      title: 'List pastors (paginated)'
-      description: ''
-      authenticated: false
-      deprecated: false
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters: []
-    cleanUrlParameters: []
-    queryParameters: []
-    cleanQueryParameters: []
-    bodyParameters: []
-    cleanBodyParameters: []
-    fileParameters: []
-    responses:
-      -
-        custom: []
-        status: 404
-        content: |-
-          {
-              "message": "The route Lunion-Lab/paroisse-st-sauveur-backend/public/api/pastors could not be found."
-          }
-        headers:
-          cache-control: 'no-cache, private'
-          content-type: application/json
-        description: null
-    responseFields: []
-    auth: []
-    controller: null
-    method: null
-    route: null
-  -
-    custom: []
-    httpMethods:
       - POST
     uri: api/pastors
     metadata:
@@ -2932,7 +2848,7 @@ endpoints:
         name: started_at
         description: 'Must be a valid date.'
         required: true
-        example: '2025-12-08T17:00:01'
+        example: '2025-12-11T10:38:26'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -2943,7 +2859,7 @@ endpoints:
         name: ended_at
         description: 'Must be a valid date.'
         required: false
-        example: '2025-12-08T17:00:01'
+        example: '2025-12-11T10:38:26'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -2962,8 +2878,8 @@ endpoints:
         deprecated: false
     cleanBodyParameters:
       fullname: vmqeopfuudtdsufvyvddq
-      started_at: '2025-12-08T17:00:01'
-      ended_at: '2025-12-08T17:00:01'
+      started_at: '2025-12-11T10:38:26'
+      ended_at: '2025-12-11T10:38:26'
       description: 'Dolores dolorum amet iste laborum eius est dolor.'
     fileParameters: []
     responses: []
@@ -3078,7 +2994,7 @@ endpoints:
         name: started_at
         description: 'Must be a valid date.'
         required: false
-        example: '2025-12-08T17:00:01'
+        example: '2025-12-11T10:38:26'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -3089,7 +3005,7 @@ endpoints:
         name: ended_at
         description: 'Must be a valid date.'
         required: false
-        example: '2025-12-08T17:00:01'
+        example: '2025-12-11T10:38:26'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -3108,8 +3024,8 @@ endpoints:
         deprecated: false
     cleanBodyParameters:
       fullname: vmqeopfuudtdsufvyvddq
-      started_at: '2025-12-08T17:00:01'
-      ended_at: '2025-12-08T17:00:01'
+      started_at: '2025-12-11T10:38:26'
+      ended_at: '2025-12-11T10:38:26'
       description: 'Dolores dolorum amet iste laborum eius est dolor.'
     fileParameters: []
     responses: []
@@ -3164,48 +3080,6 @@ endpoints:
   -
     custom: []
     httpMethods:
-      - GET
-    uri: api/programmations
-    metadata:
-      custom: []
-      groupName: Endpoints
-      groupDescription: ''
-      subgroup: ''
-      subgroupDescription: ''
-      title: 'List programmations (paginated)'
-      description: ''
-      authenticated: false
-      deprecated: false
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters: []
-    cleanUrlParameters: []
-    queryParameters: []
-    cleanQueryParameters: []
-    bodyParameters: []
-    cleanBodyParameters: []
-    fileParameters: []
-    responses:
-      -
-        custom: []
-        status: 404
-        content: |-
-          {
-              "message": "The route Lunion-Lab/paroisse-st-sauveur-backend/public/api/programmations could not be found."
-          }
-        headers:
-          cache-control: 'no-cache, private'
-          content-type: application/json
-        description: null
-    responseFields: []
-    auth: []
-    controller: null
-    method: null
-    route: null
-  -
-    custom: []
-    httpMethods:
       - POST
     uri: api/programmations
     metadata:
@@ -3242,7 +3116,7 @@ endpoints:
         name: date_at
         description: 'Must be a valid date.'
         required: true
-        example: '2025-12-08T17:00:01'
+        example: '2025-12-11T10:38:26'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -3283,7 +3157,7 @@ endpoints:
         deprecated: false
     cleanBodyParameters:
       name: vmqeopfuudtdsufvyvddq
-      date_at: '2025-12-08T17:00:01'
+      date_at: '2025-12-11T10:38:26'
       started_at: consequatur
       description: 'Dolores dolorum amet iste laborum eius est dolor.'
     fileParameters: []
@@ -3399,7 +3273,7 @@ endpoints:
         name: date_at
         description: 'Must be a valid date.'
         required: false
-        example: '2025-12-08T17:00:01'
+        example: '2025-12-11T10:38:26'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -3440,7 +3314,7 @@ endpoints:
         deprecated: false
     cleanBodyParameters:
       name: vmqeopfuudtdsufvyvddq
-      date_at: '2025-12-08T17:00:01'
+      date_at: '2025-12-11T10:38:26'
       description: 'Dolores dolorum amet iste laborum eius est dolor.'
     fileParameters: []
     responses: []
@@ -3487,48 +3361,6 @@ endpoints:
     cleanBodyParameters: []
     fileParameters: []
     responses: []
-    responseFields: []
-    auth: []
-    controller: null
-    method: null
-    route: null
-  -
-    custom: []
-    httpMethods:
-      - GET
-    uri: api/services
-    metadata:
-      custom: []
-      groupName: Endpoints
-      groupDescription: ''
-      subgroup: ''
-      subgroupDescription: ''
-      title: 'List services (paginated)'
-      description: ''
-      authenticated: false
-      deprecated: false
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters: []
-    cleanUrlParameters: []
-    queryParameters: []
-    cleanQueryParameters: []
-    bodyParameters: []
-    cleanBodyParameters: []
-    fileParameters: []
-    responses:
-      -
-        custom: []
-        status: 404
-        content: |-
-          {
-              "message": "The route Lunion-Lab/paroisse-st-sauveur-backend/public/api/services could not be found."
-          }
-        headers:
-          cache-control: 'no-cache, private'
-          content-type: application/json
-        description: null
     responseFields: []
     auth: []
     controller: null
@@ -4105,6 +3937,174 @@ endpoints:
     cleanBodyParameters: []
     fileParameters: []
     responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+  -
+    custom: []
+    httpMethods:
+      - GET
+    uri: api/events
+    metadata:
+      custom: []
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      deprecated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        custom: []
+        status: 404
+        content: |-
+          {
+              "message": "The route Lunion-Lab/paroisse-st-sauveur-backend/public/api/events could not be found."
+          }
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+        description: null
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+  -
+    custom: []
+    httpMethods:
+      - GET
+    uri: api/pastors
+    metadata:
+      custom: []
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'List pastors (paginated)'
+      description: ''
+      authenticated: false
+      deprecated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        custom: []
+        status: 404
+        content: |-
+          {
+              "message": "The route Lunion-Lab/paroisse-st-sauveur-backend/public/api/pastors could not be found."
+          }
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+        description: null
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+  -
+    custom: []
+    httpMethods:
+      - GET
+    uri: api/programmations
+    metadata:
+      custom: []
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'List programmations (paginated)'
+      description: ''
+      authenticated: false
+      deprecated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        custom: []
+        status: 404
+        content: |-
+          {
+              "message": "The route Lunion-Lab/paroisse-st-sauveur-backend/public/api/programmations could not be found."
+          }
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+        description: null
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+  -
+    custom: []
+    httpMethods:
+      - GET
+    uri: api/services
+    metadata:
+      custom: []
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'List services (paginated)'
+      description: ''
+      authenticated: false
+      deprecated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        custom: []
+        status: 404
+        content: |-
+          {
+              "message": "The route Lunion-Lab/paroisse-st-sauveur-backend/public/api/services could not be found."
+          }
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+        description: null
     responseFields: []
     auth: []
     controller: null

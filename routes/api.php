@@ -69,7 +69,7 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::apiResource('messes', MesseController::class);
 
     // News
-    Route::apiResource('news', NewsController::class);
+    Route::apiResource('news', NewsController::class)->except('index');
 
     // Pastors
     Route::apiResource('pastors', PastorController::class)->except('index');
@@ -85,6 +85,7 @@ Route::middleware('auth:sanctum')->group(function () {
 });
 
 // PUBLIC ROUTES
+Route::apiResource('news', NewsController::class)->only('index');
 Route::apiResource('events', EventController::class)->only('index');
 Route::apiResource('pastors', PastorController::class)->only('index');
 Route::apiResource('programmations', ProgrammationController::class)->only('index');

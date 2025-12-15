@@ -65,7 +65,7 @@ class EventController extends Controller
             $path = $image->store('events', 'public');
 
             // Mettre à jour le champ image avec le chemin relatif
-            $data['image'] = $path;
+            $data['image'] = 'storage/' . $path;
         }
 
         // Créer l'événement avec le repository
@@ -98,7 +98,7 @@ class EventController extends Controller
 
             // Stocker la nouvelle image
             $path = $image->store('events', 'public');
-            $data['image'] = $path;
+            $data['image'] = 'storage/' . $path;
         }
 
         // Mettre à jour l'événement

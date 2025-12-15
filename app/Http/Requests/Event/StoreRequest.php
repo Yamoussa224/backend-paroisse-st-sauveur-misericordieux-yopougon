@@ -19,7 +19,7 @@ class StoreRequest extends FormRequest
             'time_at'      => 'required',
             'location_at'  => 'required|string|max:150',
             'description'  => 'nullable|string',
-            'image'        => 'required|string|max:255',
+            'image'        => 'nullable|image|mimes:jpg,jpeg,png,webp|max:2048',
         ];
     }
 }

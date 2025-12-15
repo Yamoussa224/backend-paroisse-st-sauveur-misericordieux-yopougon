@@ -2,14 +2,15 @@
 
 namespace App\Http\Controllers\Api;
 
-use App\Http\Controllers\Controller;
-use App\Http\Requests\Event\StoreRequest;
-use App\Http\Requests\Event\UpdateRequest;
-use App\Http\Resources\EventResource;
-use App\Repositories\EventRepository;
-use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
+use Illuminate\Http\JsonResponse;
+use App\Http\Controllers\Controller;
+use App\Http\Resources\EventResource;
+use App\Repositories\EventRepository;
+use Illuminate\Support\Facades\Storage;
+use App\Http\Requests\Event\StoreRequest;
+use App\Http\Requests\Event\UpdateRequest;
 
 class EventController extends Controller
 {
@@ -54,7 +55,22 @@ class EventController extends Controller
 
     public function store(StoreRequest $request)
     {
-        $event = $this->repo->create($request->validated());
+        $data = $request->validated();
+
+        // Gérer l'upload d'image
+        if ($request->hasFile('image')) {
+            $image = $request->file('image');
+            
+            // Option 1: Stocker dans storage/app/public/events
+            $path = $image->store('events', 'public');
+
+            // Mettre à jour le champ image avec le chemin relatif
+            $data['image'] = $path;
+        }
+
+        // Créer l'événement avec le repository
+        $event = $this->repo->create($data);
+
         return (new EventResource($event))
             ->response()
             ->setStatusCode(Response::HTTP_CREATED);
@@ -67,7 +83,27 @@ class EventController extends Controller
 
     public function update(UpdateRequest $request, string $id): EventResource
     {
-        $event = $this->repo->update($id, $request->validated());
+        $data = $request->validated();
+
+        $event = $this->repo->find($id); // récupérer l'événement existant
+
+        // Gestion de l'image
+        if ($request->hasFile('image')) {
+            $image = $request->file('image');
+
+            // Supprimer l'ancienne image si elle existe
+            if ($event->image && Storage::disk('public')->exists($event->image)) {
+                Storage::disk('public')->delete($event->image);
+            }
+
+            // Stocker la nouvelle image
+            $path = $image->store('events', 'public');
+            $data['image'] = $path;
+        }
+
+        // Mettre à jour l'événement
+        $event = $this->repo->update($id, $data);
+
         return new EventResource($event);
     }
 

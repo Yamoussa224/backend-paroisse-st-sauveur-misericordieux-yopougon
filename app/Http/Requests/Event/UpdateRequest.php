@@ -19,7 +19,7 @@ class UpdateRequest extends FormRequest
             'time_at'      => 'sometimes',
             'location_at'  => 'sometimes|string|max:150',
             'description'  => 'nullable|string',
-            'image'        => 'sometimes|string|max:255',
+            'image'        => 'nullable|image|mimes:jpg,jpeg,png,webp|max:2048',
         ];
     }
 }

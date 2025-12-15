@@ -14,7 +14,7 @@ class EventResource extends JsonResource
             'description'   => $this->description,
             'date_at'       => $this->date_at,
             'time_at'       => $this->time_at,
-            'image'         => $this->image,
+            'image'         => env('APP_URL') . '/' . $this->image,
             'location_at'   => $this->location_at,
             'created_at'    => optional($this->created_at)->toDateTimeString(),
         ];

@@ -23,7 +23,6 @@ class MediationResource extends JsonResource
 
             // Timestamps
             'created_at'    => optional($this->created_at)->toDateTimeString(),
-            // 'updated_at'       => $this->updated_at,
         ];
     }
 }

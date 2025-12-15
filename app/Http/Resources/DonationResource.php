@@ -21,8 +21,6 @@ class DonationResource extends JsonResource
             'description'    => $this->description,
             'donation_at'    => optional($this->donation_at)->toDateString(),
             'created_at'     => optional($this->created_at)->toDateTimeString(),
-            // 'updated_at'     => optional($this->updated_at)->toDateTimeString(),
-            // 'deleted_at'     => optional($this->deleted_at)->toDateTimeString(),
         ];
     }
 }

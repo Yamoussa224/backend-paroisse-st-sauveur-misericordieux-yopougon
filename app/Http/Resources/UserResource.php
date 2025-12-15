@@ -19,7 +19,7 @@ class UserResource extends JsonResource
             'phone'            => $this->phone,
             'status'           => $this->status,
             'role'             => $this->role,
-            'photo'            => $this->photo,
+            'photo'            => env('APP_URL') . '/' . $this->photo,
             'email_verified_at' => $this->email_verified_at,
 
             // timestamps

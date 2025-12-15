@@ -30,10 +30,5 @@ class Event extends Model
 {
 	use SoftDeletes;
 
-	protected $casts = [
-		'date_at' => 'datetime',
-		'time_at' => 'datetime'
-	];
-
 	protected $guarded = [];
 }

@@ -16,7 +16,7 @@ class ServiceResource extends JsonResource
             'id'          => $this->id,
             'title'       => $this->title,
             'description' => $this->description,
-            'image'       => $this->image,
+            'image'       => env('APP_URL') . '/' . $this->image,
 
             // timestamps
             'created_at'    => optional($this->created_at)->toDateTimeString(),

@@ -28,10 +28,5 @@ class Pastor extends Model
 {
 	use SoftDeletes;
 
-	protected $casts = [
-		'started_at' => 'datetime',
-		'ended_at' => 'datetime'
-	];
-
 	protected $guarded = [];
 }

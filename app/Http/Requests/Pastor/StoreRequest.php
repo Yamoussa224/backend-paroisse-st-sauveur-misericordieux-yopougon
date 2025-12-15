@@ -15,6 +15,7 @@ class StoreRequest extends FormRequest
     {
         return [
             'fullname'    => 'required|string|max:150',
+            'photo'       => 'nullable|string|max:255',
             'started_at'  => 'required|date',
             'ended_at'    => 'nullable|date',
             'description' => 'required|string',

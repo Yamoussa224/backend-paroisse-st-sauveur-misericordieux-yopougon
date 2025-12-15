@@ -18,7 +18,7 @@ class StoreRequest extends FormRequest
             'date_at'      => 'required|date',
             'time_at'      => 'required',
             'location_at'  => 'required|string|max:150',
-            'description'  => 'nullable|string',
+            'description'  => 'nullable|string',  
             'image'        => 'nullable|image|mimes:jpg,jpeg,png,webp|max:2048',
         ];
     }

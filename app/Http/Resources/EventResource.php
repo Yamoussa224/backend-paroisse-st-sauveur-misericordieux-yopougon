@@ -12,14 +12,11 @@ class EventResource extends JsonResource
             'id'            => $this->id,
             'title'         => $this->title,
             'description'   => $this->description,
-            'location'      => $this->location,
-            'date'          => $this->date,
-            'start_time'    => $this->start_time,
-            'end_time'      => $this->end_time,
+            'date_at'       => $this->date_at,
+            'time_at'       => $this->time_at,
             'image'         => $this->image,
-            'status'        => $this->status,
+            'location_at'   => $this->location_at,
             'created_at'    => optional($this->created_at)->toDateTimeString(),
-            // 'updated_at'    => $this->updated_at,
         ];
     }
 }

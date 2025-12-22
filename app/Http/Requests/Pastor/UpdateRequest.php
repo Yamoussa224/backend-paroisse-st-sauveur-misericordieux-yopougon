@@ -15,7 +15,7 @@ class UpdateRequest extends FormRequest
     {
         return [
             'fullname'    => 'sometimes|string|max:150',
-            'photo'       => 'nullable|string|max:255',
+            'photo'       => 'nullable|image|mimes:jpg,jpeg,png,webp|max:2048',
             'started_at'  => 'sometimes|date',
             'ended_at'    => 'nullable|date',
             'description' => 'sometimes|string',

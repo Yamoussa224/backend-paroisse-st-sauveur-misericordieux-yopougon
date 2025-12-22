@@ -9,6 +9,7 @@ use App\Http\Resources\PastorResource;
 use App\Repositories\Contracts\PastorRepositoryInterface;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
+use Illuminate\Support\Facades\Storage;
 
 class PastorController extends Controller
 {
@@ -63,7 +64,20 @@ class PastorController extends Controller
      */
     public function store(StoreRequest $request)
     {
-        $pastor = $this->repo->create($request->validated());
+        $data = $request->validated();
+
+        // Gérer l'upload d'image
+        if ($request->hasFile('photo')) {
+            $photo = $request->file('photo');
+            
+            // Option 1: Stocker dans storage/app/public/events
+            $path = $photo->store('pastors', 'public');
+
+            // Mettre à jour le champ image avec le chemin relatif
+            $data['photo'] = 'storage/' . $path;
+        }
+
+        $pastor = $this->repo->create($data);
 
         return (new PastorResource($pastor))
             ->response()
@@ -83,7 +97,25 @@ class PastorController extends Controller
      */
     public function update(UpdateRequest $request, string $id)
     {
-        $pastor = $this->repo->update($id, $request->validated());
+        $data = $request->validated();
+
+        $pastor = $this->repo->find($id); // récupérer l'événement existant
+
+        // Gestion de l'image
+        if ($request->hasFile('photo')) {
+            $photo = $request->file('photo');
+
+            // Supprimer l'ancienne image si elle existe
+            if ($pastor->photo && Storage::disk('public')->exists($pastor->photo)) {
+                Storage::disk('public')->delete($pastor->photo);
+            }
+
+            // Stocker la nouvelle image
+            $path = $photo->store('pastors', 'public');
+            $data['photo'] = 'storage/' . $path;
+        }
+
+        $pastor = $this->repo->update($id, $data);
         return new PastorResource($pastor);
     }
 

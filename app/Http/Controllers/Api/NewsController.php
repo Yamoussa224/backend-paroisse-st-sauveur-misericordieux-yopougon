@@ -2,13 +2,14 @@
 
 namespace App\Http\Controllers\Api;
 
-use App\Http\Controllers\Controller;
-use App\Http\Requests\News\StoreRequest;
-use App\Http\Requests\News\UpdateRequest;
-use App\Http\Resources\NewsResource;
-use App\Repositories\Contracts\NewRepositoryInterface;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
+use App\Http\Controllers\Controller;
+use App\Http\Resources\NewsResource;
+use Illuminate\Support\Facades\Storage;
+use App\Http\Requests\News\StoreRequest;
+use App\Http\Requests\News\UpdateRequest;
+use App\Repositories\Contracts\NewRepositoryInterface;
 
 class NewsController extends Controller
 {
@@ -30,12 +31,8 @@ class NewsController extends Controller
             $conditions[] = ['title', 'LIKE', '%' . $request->title . '%'];
         }
 
-        if ($request->filled('author')) {
-            $conditions[] = ['author', 'LIKE', '%' . $request->author . '%'];
-        }
-
-        if ($request->filled('category')) {
-            $conditions[] = ['category', '=', $request->category];
+        if ($request->filled('location')) {
+            $conditions[] = ['location', 'LIKE', '%' . $request->location . '%'];
         }
 
         if ($request->filled('status')) {
@@ -67,7 +64,20 @@ class NewsController extends Controller
      */
     public function store(StoreRequest $request)
     {
-        $newsItem = $this->repo->create($request->validated());
+        $data = $request->validated();
+
+        // Gérer l'upload d'image
+        if ($request->hasFile('image')) {
+            $image = $request->file('image');
+            
+            // Option 1: Stocker dans storage/app/public/events
+            $path = $image->store('news', 'public');
+
+            // Mettre à jour le champ image avec le chemin relatif
+            $data['image'] = 'storage/' . $path;
+        }
+
+        $newsItem = $this->repo->create($data);
 
         return (new NewsResource($newsItem))
             ->response()
@@ -87,7 +97,25 @@ class NewsController extends Controller
      */
     public function update(UpdateRequest $request, string $id)
     {
-        $newsItem = $this->repo->update($id, $request->validated());
+        $data = $request->validated();
+
+        $news = $this->repo->find($id); // récupérer l'événement existant
+
+        // Gestion de l'image
+        if ($request->hasFile('image')) {
+            $image = $request->file('image');
+
+            // Supprimer l'ancienne image si elle existe
+            if ($news->image && Storage::disk('public')->exists($news->image)) {
+                Storage::disk('public')->delete($news->image);
+            }
+
+            // Stocker la nouvelle image
+            $path = $image->store('news', 'public');
+            $data['image'] = 'storage/' . $path;
+        }
+
+        $newsItem = $this->repo->update($id, $data);
         return new NewsResource($newsItem);
     }
 

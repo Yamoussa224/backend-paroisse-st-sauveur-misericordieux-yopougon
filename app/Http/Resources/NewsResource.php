@@ -15,14 +15,20 @@ class NewsResource extends JsonResource
         return [
             'id'            => $this->id,
             'title'         => $this->title,
-            'author'        => $this->author,
-            'category'      => $this->category,
-            'status'        => $this->new_status,
-            'views'         => $this->views,
-            'published_at'  => $this->published_at,
+            'image'         => env('APP_URL') . '/' . $this->image,
+            'new_resume'    => $this->new_resume,
+            'location'      => $this->location,
+            'content'       => $this->content,
+
+            'status'        => $this->new_status, // draft | published | archived
+            'views_count'   => $this->views ?? 0,
+            'reads_count'   => $this->reads ?? 0,
+
+            'published_at'  => optional($this->published_at)->toDateString(),
 
             // timestamps
             'created_at'    => optional($this->created_at)->toDateTimeString(),
+            // 'updated_at'    => optional($this->updated_at)->toDateTimeString(),
         ];
     }
 }

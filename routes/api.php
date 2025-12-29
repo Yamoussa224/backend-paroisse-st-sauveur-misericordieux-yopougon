@@ -86,6 +86,7 @@ Route::middleware('auth:sanctum')->group(function () {
 
 // PUBLIC ROUTES
 Route::apiResource('news', NewsController::class)->only('index');
+Route::apiResource('messes', MesseController::class)->only('store');
 Route::apiResource('events', EventController::class)->only('index');
 Route::apiResource('pastors', PastorController::class)->only('index');
 Route::apiResource('programmations', ProgrammationController::class)->only('index');

@@ -49,7 +49,7 @@ Route::prefix('auth')->group(function () {
 | API Routes (Protected)
 |--------------------------------------------------------------------------
 */
-Route::middleware('auth:sanctum')->group(function () {
+// Route::middleware('auth:sanctum')->group(function () {
     // Users
     Route::apiResource('users', UserController::class);
 
@@ -82,13 +82,13 @@ Route::middleware('auth:sanctum')->group(function () {
 
     // Time Slots
     Route::apiResource('time-slots', TimeSlotController::class);
-});
+// });
 
 // PUBLIC ROUTES
-Route::apiResource('news', NewsController::class)->only('index');
-Route::apiResource('messes', MesseController::class)->only('store');
-Route::apiResource('events', EventController::class)->only('index');
-Route::apiResource('pastors', PastorController::class)->only('index');
-Route::apiResource('programmations', ProgrammationController::class)->only('index');
-Route::apiResource('services', ServiceController::class)->only('index');
+// Route::apiResource('news', NewsController::class)->only('index');
+// Route::apiResource('messes', MesseController::class)->only('store');
+// Route::apiResource('events', EventController::class)->only('index');
+// Route::apiResource('pastors', PastorController::class)->only('index');
+// Route::apiResource('programmations', ProgrammationController::class)->only('index');
+// Route::apiResource('services', ServiceController::class)->only('index');
 

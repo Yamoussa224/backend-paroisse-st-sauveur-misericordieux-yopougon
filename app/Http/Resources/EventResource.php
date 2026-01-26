@@ -16,6 +16,11 @@ class EventResource extends JsonResource
             'time_at'       => $this->time_at,
             'image'         => env('APP_URL') . '/' . $this->image,
             'location_at'   => $this->location_at,
+
+            'participants' => ParticipantEventResource::collection(
+                $this->whenLoaded('participants')
+            ),
+            
             'created_at'    => optional($this->created_at)->toDateTimeString(),
         ];
     }

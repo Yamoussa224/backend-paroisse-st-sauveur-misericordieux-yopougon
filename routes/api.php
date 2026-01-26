@@ -1,6 +1,5 @@
 <?php
 
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\AuthController;
 use App\Http\Controllers\Api\NewsController;
@@ -14,6 +13,7 @@ use App\Http\Controllers\Api\DonationController;
 use App\Http\Controllers\Api\TimeSlotController;
 use App\Http\Controllers\Api\MediationController;
 use App\Http\Controllers\Api\ProgrammationController;
+use App\Http\Controllers\Api\ParticipantEventController;
 
 /*
 |--------------------------------------------------------------------------
@@ -57,7 +57,7 @@ Route::prefix('auth')->group(function () {
     Route::apiResource('donations', DonationController::class);
 
     // Events
-    Route::apiResource('events', EventController::class)->except('index');
+    Route::apiResource('events', EventController::class);
 
     // Listens
     Route::apiResource('listens', ListenController::class);
@@ -69,19 +69,21 @@ Route::prefix('auth')->group(function () {
     Route::apiResource('messes', MesseController::class);
 
     // News
-    Route::apiResource('news', NewsController::class)->except('index');
+    Route::apiResource('news', NewsController::class);
 
     // Pastors
-    Route::apiResource('pastors', PastorController::class)->except('index');
+    Route::apiResource('pastors', PastorController::class);
 
     // Programmations
-    Route::apiResource('programmations', ProgrammationController::class)->except('index');
+    Route::apiResource('programmations', ProgrammationController::class);
 
     // Services
-    Route::apiResource('services', ServiceController::class)->except('index');
+    Route::apiResource('services', ServiceController::class);
 
     // Time Slots
     Route::apiResource('time-slots', TimeSlotController::class);
+
+    Route::apiResource('participants', ParticipantEventController::class);
 // });
 
 // PUBLIC ROUTES

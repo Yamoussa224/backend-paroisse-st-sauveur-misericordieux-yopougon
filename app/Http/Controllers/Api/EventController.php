@@ -42,7 +42,7 @@ class EventController extends Controller
         }
 
         $events = $this->repo->paginate(
-            with: [],
+            with: ['participants'],
             page: (int) $request->input('per_page', 15),
             conditions: $conditions,
             skip: (int) $request->input('skip', 0),

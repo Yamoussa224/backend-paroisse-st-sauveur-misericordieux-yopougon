@@ -14,6 +14,7 @@ use App\Repositories\DonationRepository;
 use App\Repositories\TimeSlotRepository;
 use App\Repositories\MediationRepository;
 use App\Repositories\ProgrammationRepository;
+use App\Repositories\ParticipantEventRepository;
 use App\Repositories\Contracts\NewRepositoryInterface;
 use App\Repositories\Contracts\MessRepositoryInterface;
 use App\Repositories\Contracts\UserRepositoryInterface;
@@ -25,6 +26,7 @@ use App\Repositories\Contracts\DonationRepositoryInterface;
 use App\Repositories\Contracts\TimeSlotRepositoryInterface;
 use App\Repositories\Contracts\MediationRepositoryInterface;
 use App\Repositories\Contracts\ProgrammationRepositoryInterface;
+use App\Repositories\Contracts\ParticipantEventRepositoryInterface;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -44,6 +46,7 @@ class AppServiceProvider extends ServiceProvider
         $this->app->bind(ServiceRepositoryInterface::class, ServiceRepository::class);
         $this->app->bind(TimeSlotRepositoryInterface::class, TimeSlotRepository::class);
         $this->app->bind(UserRepositoryInterface::class, UserRepository::class);
+        $this->app->bind(ParticipantEventRepositoryInterface::class, ParticipantEventRepository::class);
     }
 
     /**

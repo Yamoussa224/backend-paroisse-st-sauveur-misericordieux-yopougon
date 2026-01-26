@@ -5,7 +5,7 @@ namespace App\Repositories;
 use App\Models\ParticipantEvent;
 use App\Repositories\Contracts\ParticipantEventRepositoryInterface;
 
-class ParticiapantEventRepository extends BaseRepository implements ParticipantEventRepositoryInterface
+class ParticipantEventRepository extends BaseRepository implements ParticipantEventRepositoryInterface
 {
     public function __construct(ParticipantEvent $model)
     {

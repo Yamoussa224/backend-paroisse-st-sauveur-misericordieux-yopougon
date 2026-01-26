@@ -49,7 +49,7 @@ Route::prefix('auth')->group(function () {
 | API Routes (Protected)
 |--------------------------------------------------------------------------
 */
-// Route::middleware('auth:sanctum')->group(function () {
+Route::middleware('auth:sanctum')->group(function () {
     // Users
     Route::apiResource('users', UserController::class);
 
@@ -57,7 +57,7 @@ Route::prefix('auth')->group(function () {
     Route::apiResource('donations', DonationController::class);
 
     // Events
-    Route::apiResource('events', EventController::class);
+    Route::apiResource('events', EventController::class)->except('index');
 
     // Listens
     Route::apiResource('listens', ListenController::class);
@@ -69,28 +69,28 @@ Route::prefix('auth')->group(function () {
     Route::apiResource('messes', MesseController::class);
 
     // News
-    Route::apiResource('news', NewsController::class);
+    Route::apiResource('news', NewsController::class)->except('index');
 
     // Pastors
-    Route::apiResource('pastors', PastorController::class);
+    Route::apiResource('pastors', PastorController::class)->except('index');
 
     // Programmations
-    Route::apiResource('programmations', ProgrammationController::class);
+    Route::apiResource('programmations', ProgrammationController::class)->except('index');
 
     // Services
-    Route::apiResource('services', ServiceController::class);
+    Route::apiResource('services', ServiceController::class)->except('index');
 
     // Time Slots
     Route::apiResource('time-slots', TimeSlotController::class);
 
     Route::apiResource('participants', ParticipantEventController::class);
-// });
+});
 
 // PUBLIC ROUTES
-// Route::apiResource('news', NewsController::class)->only('index');
-// Route::apiResource('messes', MesseController::class)->only('store');
-// Route::apiResource('events', EventController::class)->only('index');
-// Route::apiResource('pastors', PastorController::class)->only('index');
-// Route::apiResource('programmations', ProgrammationController::class)->only('index');
-// Route::apiResource('services', ServiceController::class)->only('index');
-
+Route::apiResource('news', NewsController::class)->only('index');
+Route::apiResource('messes', MesseController::class)->only('store');
+Route::apiResource('events', EventController::class)->only('index');
+Route::apiResource('pastors', PastorController::class)->only('index');
+Route::apiResource('programmations', ProgrammationController::class)->only('index');
+Route::apiResource('services', ServiceController::class)->only('index');
+Route::apiResource('participants', ParticipantEventController::class)->only('index');

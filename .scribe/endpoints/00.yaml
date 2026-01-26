@@ -374,7 +374,7 @@ endpoints:
         name: email_verified_at
         description: 'Must be a valid date.'
         required: false
-        example: '2025-12-11T10:38:26'
+        example: '2026-01-26T15:34:03'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -388,7 +388,7 @@ endpoints:
       status: ENABLE
       photo: smsjuryvojcybzvrbyick
       role: ADMIN
-      email_verified_at: '2025-12-11T10:38:26'
+      email_verified_at: '2026-01-26T15:34:03'
     fileParameters: []
     responses: []
     responseFields: []
@@ -572,7 +572,7 @@ endpoints:
         name: email_verified_at
         description: 'Must be a valid date.'
         required: false
-        example: '2025-12-11T10:38:26'
+        example: '2026-01-26T15:34:03'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -586,7 +586,7 @@ endpoints:
       status: ENABLE
       photo: smsjuryvojcybzvrbyick
       role: ADMIN
-      email_verified_at: '2025-12-11T10:38:26'
+      email_verified_at: '2026-01-26T15:34:03'
     fileParameters: []
     responses: []
     responseFields: []
@@ -773,7 +773,7 @@ endpoints:
         name: donation_at
         description: 'Must be a valid date.'
         required: true
-        example: '2025-12-11T10:38:26'
+        example: '2026-01-26T15:34:03'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -786,7 +786,7 @@ endpoints:
       paymethod: xbajwbpilpmufinllwloa
       paytransaction: uydlsmsjuryvojcybzvrb
       description: 'Dolores dolorum amet iste laborum eius est dolor.'
-      donation_at: '2025-12-11T10:38:26'
+      donation_at: '2026-01-26T15:34:03'
     fileParameters: []
     responses: []
     responseFields: []
@@ -955,7 +955,7 @@ endpoints:
         name: donation_at
         description: 'Must be a valid date.'
         required: false
-        example: '2025-12-11T10:38:26'
+        example: '2026-01-26T15:34:03'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -968,7 +968,7 @@ endpoints:
       paymethod: xbajwbpilpmufinllwloa
       paytransaction: uydlsmsjuryvojcybzvrb
       description: 'Dolores dolorum amet iste laborum eius est dolor.'
-      donation_at: '2025-12-11T10:38:26'
+      donation_at: '2026-01-26T15:34:03'
     fileParameters: []
     responses: []
     responseFields: []
@@ -1022,7 +1022,7 @@ endpoints:
   -
     custom: []
     httpMethods:
-      - POST
+      - GET
     uri: api/events
     metadata:
       custom: []
@@ -1036,6 +1036,48 @@ endpoints:
       deprecated: false
     headers:
       Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        custom: []
+        status: 404
+        content: |-
+          {
+              "message": "The route Lunion-Lab/paroisse-st-sauveur-backend/public/api/events could not be found."
+          }
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+        description: null
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+  -
+    custom: []
+    httpMethods:
+      - POST
+    uri: api/events
+    metadata:
+      custom: []
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      deprecated: false
+    headers:
+      Content-Type: multipart/form-data
       Accept: application/json
     urlParameters: []
     cleanUrlParameters: []
@@ -1058,7 +1100,7 @@ endpoints:
         name: date_at
         description: 'Must be a valid date.'
         required: true
-        example: '2025-12-11T10:38:26'
+        example: '2026-01-26T15:34:03'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -1100,22 +1142,22 @@ endpoints:
       image:
         custom: []
         name: image
-        description: 'Must not be greater than 255 characters.'
-        required: true
-        example: dtdsufvyvddqamniihfqc
-        type: string
+        description: 'Must be an image. Must not be greater than 2048 kilobytes.'
+        required: false
+        example: null
+        type: file
         enumValues: []
         exampleWasSpecified: false
-        nullable: false
+        nullable: true
         deprecated: false
     cleanBodyParameters:
       title: vmqeopfuudtdsufvyvddq
-      date_at: '2025-12-11T10:38:26'
+      date_at: '2026-01-26T15:34:03'
       time_at: consequatur
       location_at: mqeopfuudtdsufvyvddqa
       description: 'Dolores dolorum amet iste laborum eius est dolor.'
-      image: dtdsufvyvddqamniihfqc
-    fileParameters: []
+    fileParameters:
+      image: null
     responses: []
     responseFields: []
     auth: []
@@ -1193,7 +1235,7 @@ endpoints:
       authenticated: false
       deprecated: false
     headers:
-      Content-Type: application/json
+      Content-Type: multipart/form-data
       Accept: application/json
     urlParameters:
       id:
@@ -1228,7 +1270,7 @@ endpoints:
         name: date_at
         description: 'Must be a valid date.'
         required: false
-        example: '2025-12-11T10:38:26'
+        example: '2026-01-26T15:34:03'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -1270,21 +1312,21 @@ endpoints:
       image:
         custom: []
         name: image
-        description: 'Must not be greater than 255 characters.'
+        description: 'Must be an image. Must not be greater than 2048 kilobytes.'
         required: false
-        example: dtdsufvyvddqamniihfqc
-        type: string
+        example: null
+        type: file
         enumValues: []
         exampleWasSpecified: false
-        nullable: false
+        nullable: true
         deprecated: false
     cleanBodyParameters:
       title: vmqeopfuudtdsufvyvddq
-      date_at: '2025-12-11T10:38:26'
+      date_at: '2026-01-26T15:34:03'
       location_at: amniihfqcoynlazghdtqt
       description: 'Dolores dolorum amet iste laborum eius est dolor.'
-      image: dtdsufvyvddqamniihfqc
-    fileParameters: []
+    fileParameters:
+      image: null
     responses: []
     responseFields: []
     auth: []
@@ -1459,7 +1501,7 @@ endpoints:
         name: listen_at
         description: 'Must be a valid date.'
         required: true
-        example: '2025-12-11T10:38:26'
+        example: '2026-01-26T15:34:03'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -1471,7 +1513,7 @@ endpoints:
       phone: qxbajwbpilpmufinllwlo
       message: consequatur
       time_slot_id: 17
-      listen_at: '2025-12-11T10:38:26'
+      listen_at: '2026-01-26T15:34:03'
     fileParameters: []
     responses: []
     responseFields: []
@@ -1629,7 +1671,7 @@ endpoints:
         name: listen_at
         description: 'Must be a valid date.'
         required: false
-        example: '2025-12-11T10:38:26'
+        example: '2026-01-26T15:34:03'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -1641,7 +1683,7 @@ endpoints:
       phone: qxbajwbpilpmufinllwlo
       message: consequatur
       time_slot_id: 17
-      listen_at: '2025-12-11T10:38:26'
+      listen_at: '2026-01-26T15:34:03'
     fileParameters: []
     responses: []
     responseFields: []
@@ -1773,7 +1815,7 @@ endpoints:
         name: date_at
         description: 'Must be a valid date.'
         required: true
-        example: '2025-12-11T10:38:26'
+        example: '2026-01-26T15:34:03'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -1817,7 +1859,7 @@ endpoints:
         deprecated: false
     cleanBodyParameters:
       title: vmqeopfuudtdsufvyvddq
-      date_at: '2025-12-11T10:38:26'
+      date_at: '2026-01-26T15:34:03'
       author: amniihfqcoynlazghdtqt
       category: qxbajwbpilpmufinllwlo
       mediation_status: draft
@@ -1934,7 +1976,7 @@ endpoints:
         name: date_at
         description: 'Must be a valid date.'
         required: false
-        example: '2025-12-11T10:38:26'
+        example: '2026-01-26T15:34:03'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -1978,7 +2020,7 @@ endpoints:
         deprecated: false
     cleanBodyParameters:
       title: vmqeopfuudtdsufvyvddq
-      date_at: '2025-12-11T10:38:26'
+      date_at: '2026-01-26T15:34:03'
       author: amniihfqcoynlazghdtqt
       category: qxbajwbpilpmufinllwlo
       mediation_status: draft
@@ -2182,7 +2224,7 @@ endpoints:
         name: date_at
         description: 'Must be a valid date.'
         required: true
-        example: '2025-12-11T10:38:26'
+        example: '2026-01-26T15:34:04'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -2207,7 +2249,7 @@ endpoints:
       message: consequatur
       request_status: pending
       amount: 56
-      date_at: '2025-12-11T10:38:26'
+      date_at: '2026-01-26T15:34:04'
       time_at: consequatur
     fileParameters: []
     responses: []
@@ -2391,7 +2433,7 @@ endpoints:
         name: date_at
         description: 'Must be a valid date.'
         required: false
-        example: '2025-12-11T10:38:26'
+        example: '2026-01-26T15:34:04'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -2416,7 +2458,7 @@ endpoints:
       message: consequatur
       request_status: pending
       amount: 56
-      date_at: '2025-12-11T10:38:26'
+      date_at: '2026-01-26T15:34:04'
     fileParameters: []
     responses: []
     responseFields: []
@@ -2525,7 +2567,7 @@ endpoints:
       authenticated: false
       deprecated: false
     headers:
-      Content-Type: application/json
+      Content-Type: multipart/form-data
       Accept: application/json
     urlParameters: []
     cleanUrlParameters: []
@@ -2543,9 +2585,20 @@ endpoints:
         exampleWasSpecified: false
         nullable: false
         deprecated: false
-      author:
+      image:
         custom: []
-        name: author
+        name: image
+        description: 'Must be an image. Must not be greater than 2048 kilobytes.'
+        required: true
+        example: null
+        type: file
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      new_resume:
+        custom: []
+        name: new_resume
         description: 'Must not be greater than 255 characters.'
         required: true
         example: amniihfqcoynlazghdtqt
@@ -2554,12 +2607,23 @@ endpoints:
         exampleWasSpecified: false
         nullable: false
         deprecated: false
-      category:
+      location:
         custom: []
-        name: category
+        name: location
         description: 'Must not be greater than 255 characters.'
         required: true
         example: qxbajwbpilpmufinllwlo
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      content:
+        custom: []
+        name: content
+        description: ''
+        required: true
+        example: consequatur
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -2579,12 +2643,34 @@ endpoints:
         exampleWasSpecified: false
         nullable: false
         deprecated: false
+      views_count:
+        custom: []
+        name: views_count
+        description: 'Must be at least 0.'
+        required: false
+        example: 56
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        deprecated: false
+      reads_count:
+        custom: []
+        name: reads_count
+        description: 'Must be at least 0.'
+        required: false
+        example: 16
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        deprecated: false
       published_at:
         custom: []
         name: published_at
         description: 'Must be a valid date.'
         required: true
-        example: '2025-12-11T10:38:26'
+        example: '2026-01-26T15:34:04'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -2592,11 +2678,15 @@ endpoints:
         deprecated: false
     cleanBodyParameters:
       title: vmqeopfuudtdsufvyvddq
-      author: amniihfqcoynlazghdtqt
-      category: qxbajwbpilpmufinllwlo
+      new_resume: amniihfqcoynlazghdtqt
+      location: qxbajwbpilpmufinllwlo
+      content: consequatur
       new_status: draft
-      published_at: '2025-12-11T10:38:26'
-    fileParameters: []
+      views_count: 56
+      reads_count: 16
+      published_at: '2026-01-26T15:34:04'
+    fileParameters:
+      image: null
     responses: []
     responseFields: []
     auth: []
@@ -2674,7 +2764,7 @@ endpoints:
       authenticated: false
       deprecated: false
     headers:
-      Content-Type: application/json
+      Content-Type: multipart/form-data
       Accept: application/json
     urlParameters:
       id:
@@ -2704,9 +2794,20 @@ endpoints:
         exampleWasSpecified: false
         nullable: false
         deprecated: false
-      author:
+      image:
         custom: []
-        name: author
+        name: image
+        description: 'Must be an image. Must not be greater than 2048 kilobytes.'
+        required: false
+        example: null
+        type: file
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      new_resume:
+        custom: []
+        name: new_resume
         description: 'Must not be greater than 255 characters.'
         required: false
         example: amniihfqcoynlazghdtqt
@@ -2715,12 +2816,23 @@ endpoints:
         exampleWasSpecified: false
         nullable: false
         deprecated: false
-      category:
+      location:
         custom: []
-        name: category
+        name: location
         description: 'Must not be greater than 255 characters.'
         required: false
         example: qxbajwbpilpmufinllwlo
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      content:
+        custom: []
+        name: content
+        description: ''
+        required: false
+        example: consequatur
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -2740,12 +2852,34 @@ endpoints:
         exampleWasSpecified: false
         nullable: false
         deprecated: false
+      views_count:
+        custom: []
+        name: views_count
+        description: 'Must be at least 0.'
+        required: false
+        example: 56
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      reads_count:
+        custom: []
+        name: reads_count
+        description: 'Must be at least 0.'
+        required: false
+        example: 16
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
       published_at:
         custom: []
         name: published_at
         description: 'Must be a valid date.'
         required: false
-        example: '2025-12-11T10:38:26'
+        example: '2026-01-26T15:34:04'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -2753,11 +2887,15 @@ endpoints:
         deprecated: false
     cleanBodyParameters:
       title: vmqeopfuudtdsufvyvddq
-      author: amniihfqcoynlazghdtqt
-      category: qxbajwbpilpmufinllwlo
+      new_resume: amniihfqcoynlazghdtqt
+      location: qxbajwbpilpmufinllwlo
+      content: consequatur
       new_status: draft
-      published_at: '2025-12-11T10:38:26'
-    fileParameters: []
+      views_count: 56
+      reads_count: 16
+      published_at: '2026-01-26T15:34:04'
+    fileParameters:
+      image: null
     responses: []
     responseFields: []
     auth: []
@@ -2810,6 +2948,48 @@ endpoints:
   -
     custom: []
     httpMethods:
+      - GET
+    uri: api/pastors
+    metadata:
+      custom: []
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'List pastors (paginated)'
+      description: ''
+      authenticated: false
+      deprecated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        custom: []
+        status: 404
+        content: |-
+          {
+              "message": "The route Lunion-Lab/paroisse-st-sauveur-backend/public/api/pastors could not be found."
+          }
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+        description: null
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+  -
+    custom: []
+    httpMethods:
       - POST
     uri: api/pastors
     metadata:
@@ -2823,7 +3003,7 @@ endpoints:
       authenticated: false
       deprecated: false
     headers:
-      Content-Type: application/json
+      Content-Type: multipart/form-data
       Accept: application/json
     urlParameters: []
     cleanUrlParameters: []
@@ -2841,12 +3021,23 @@ endpoints:
         exampleWasSpecified: false
         nullable: false
         deprecated: false
+      photo:
+        custom: []
+        name: photo
+        description: 'Must be an image. Must not be greater than 2048 kilobytes.'
+        required: false
+        example: null
+        type: file
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        deprecated: false
       started_at:
         custom: []
         name: started_at
         description: 'Must be a valid date.'
         required: true
-        example: '2025-12-11T10:38:26'
+        example: '2026-01-26T15:34:04'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -2857,7 +3048,7 @@ endpoints:
         name: ended_at
         description: 'Must be a valid date.'
         required: false
-        example: '2025-12-11T10:38:26'
+        example: '2026-01-26T15:34:04'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -2876,10 +3067,11 @@ endpoints:
         deprecated: false
     cleanBodyParameters:
       fullname: vmqeopfuudtdsufvyvddq
-      started_at: '2025-12-11T10:38:26'
-      ended_at: '2025-12-11T10:38:26'
+      started_at: '2026-01-26T15:34:04'
+      ended_at: '2026-01-26T15:34:04'
       description: 'Dolores dolorum amet iste laborum eius est dolor.'
-    fileParameters: []
+    fileParameters:
+      photo: null
     responses: []
     responseFields: []
     auth: []
@@ -2957,7 +3149,7 @@ endpoints:
       authenticated: false
       deprecated: false
     headers:
-      Content-Type: application/json
+      Content-Type: multipart/form-data
       Accept: application/json
     urlParameters:
       id:
@@ -2987,12 +3179,23 @@ endpoints:
         exampleWasSpecified: false
         nullable: false
         deprecated: false
+      photo:
+        custom: []
+        name: photo
+        description: 'Must be an image. Must not be greater than 2048 kilobytes.'
+        required: false
+        example: null
+        type: file
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        deprecated: false
       started_at:
         custom: []
         name: started_at
         description: 'Must be a valid date.'
         required: false
-        example: '2025-12-11T10:38:26'
+        example: '2026-01-26T15:34:04'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -3003,7 +3206,7 @@ endpoints:
         name: ended_at
         description: 'Must be a valid date.'
         required: false
-        example: '2025-12-11T10:38:26'
+        example: '2026-01-26T15:34:04'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -3022,10 +3225,11 @@ endpoints:
         deprecated: false
     cleanBodyParameters:
       fullname: vmqeopfuudtdsufvyvddq
-      started_at: '2025-12-11T10:38:26'
-      ended_at: '2025-12-11T10:38:26'
+      started_at: '2026-01-26T15:34:04'
+      ended_at: '2026-01-26T15:34:04'
       description: 'Dolores dolorum amet iste laborum eius est dolor.'
-    fileParameters: []
+    fileParameters:
+      photo: null
     responses: []
     responseFields: []
     auth: []
@@ -3078,6 +3282,48 @@ endpoints:
   -
     custom: []
     httpMethods:
+      - GET
+    uri: api/programmations
+    metadata:
+      custom: []
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'List programmations (paginated)'
+      description: ''
+      authenticated: false
+      deprecated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        custom: []
+        status: 404
+        content: |-
+          {
+              "message": "The route Lunion-Lab/paroisse-st-sauveur-backend/public/api/programmations could not be found."
+          }
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+        description: null
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+  -
+    custom: []
+    httpMethods:
       - POST
     uri: api/programmations
     metadata:
@@ -3114,7 +3360,7 @@ endpoints:
         name: date_at
         description: 'Must be a valid date.'
         required: true
-        example: '2025-12-11T10:38:26'
+        example: '2026-01-26T15:34:04'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -3155,7 +3401,7 @@ endpoints:
         deprecated: false
     cleanBodyParameters:
       name: vmqeopfuudtdsufvyvddq
-      date_at: '2025-12-11T10:38:26'
+      date_at: '2026-01-26T15:34:04'
       started_at: consequatur
       description: 'Dolores dolorum amet iste laborum eius est dolor.'
     fileParameters: []
@@ -3271,7 +3517,7 @@ endpoints:
         name: date_at
         description: 'Must be a valid date.'
         required: false
-        example: '2025-12-11T10:38:26'
+        example: '2026-01-26T15:34:04'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -3312,7 +3558,7 @@ endpoints:
         deprecated: false
     cleanBodyParameters:
       name: vmqeopfuudtdsufvyvddq
-      date_at: '2025-12-11T10:38:26'
+      date_at: '2026-01-26T15:34:04'
       description: 'Dolores dolorum amet iste laborum eius est dolor.'
     fileParameters: []
     responses: []
@@ -3359,6 +3605,48 @@ endpoints:
     cleanBodyParameters: []
     fileParameters: []
     responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+  -
+    custom: []
+    httpMethods:
+      - GET
+    uri: api/services
+    metadata:
+      custom: []
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'List services (paginated)'
+      description: ''
+      authenticated: false
+      deprecated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        custom: []
+        status: 404
+        content: |-
+          {
+              "message": "The route Lunion-Lab/paroisse-st-sauveur-backend/public/api/services could not be found."
+          }
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+        description: null
     responseFields: []
     auth: []
     controller: null
@@ -3944,7 +4232,7 @@ endpoints:
     custom: []
     httpMethods:
       - GET
-    uri: api/events
+    uri: api/participants
     metadata:
       custom: []
       groupName: Endpoints
@@ -3971,7 +4259,7 @@ endpoints:
         status: 404
         content: |-
           {
-              "message": "The route Lunion-Lab/paroisse-st-sauveur-backend/public/api/events could not be found."
+              "message": "The route Lunion-Lab/paroisse-st-sauveur-backend/public/api/participants could not be found."
           }
         headers:
           cache-control: 'no-cache, private'
@@ -3985,15 +4273,15 @@ endpoints:
   -
     custom: []
     httpMethods:
-      - GET
-    uri: api/pastors
+      - POST
+    uri: api/participants
     metadata:
       custom: []
       groupName: Endpoints
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: 'List pastors (paginated)'
+      title: ''
       description: ''
       authenticated: false
       deprecated: false
@@ -4002,6 +4290,109 @@ endpoints:
       Accept: application/json
     urlParameters: []
     cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      fullname:
+        custom: []
+        name: fullname
+        description: 'Must not be greater than 255 characters.'
+        required: true
+        example: vmqeopfuudtdsufvyvddq
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      email:
+        custom: []
+        name: email
+        description: 'Must be a valid email address. Must not be greater than 255 characters.'
+        required: false
+        example: kunde.eloisa@example.com
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        deprecated: false
+      phone:
+        custom: []
+        name: phone
+        description: 'Must not be greater than 255 characters.'
+        required: false
+        example: hfqcoynlazghdtqtqxbaj
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        deprecated: false
+      message:
+        custom: []
+        name: message
+        description: ''
+        required: false
+        example: consequatur
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        deprecated: false
+      event_id:
+        custom: []
+        name: event_id
+        description: 'The <code>id</code> of an existing record in the events table.'
+        required: true
+        example: 17
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+    cleanBodyParameters:
+      fullname: vmqeopfuudtdsufvyvddq
+      email: kunde.eloisa@example.com
+      phone: hfqcoynlazghdtqtqxbaj
+      message: consequatur
+      event_id: 17
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+  -
+    custom: []
+    httpMethods:
+      - GET
+    uri: 'api/participants/{id}'
+    metadata:
+      custom: []
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      deprecated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        custom: []
+        name: id
+        description: 'The ID of the participant.'
+        required: true
+        example: consequatur
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+    cleanUrlParameters:
+      id: consequatur
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -4013,7 +4404,7 @@ endpoints:
         status: 404
         content: |-
           {
-              "message": "The route Lunion-Lab/paroisse-st-sauveur-backend/public/api/pastors could not be found."
+              "message": "The route Lunion-Lab/paroisse-st-sauveur-backend/public/api/participants/consequatur could not be found."
           }
         headers:
           cache-control: 'no-cache, private'
@@ -4027,40 +4418,102 @@ endpoints:
   -
     custom: []
     httpMethods:
-      - GET
-    uri: api/programmations
+      - PUT
+      - PATCH
+    uri: 'api/participants/{id}'
     metadata:
       custom: []
       groupName: Endpoints
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: 'List programmations (paginated)'
+      title: ''
       description: ''
       authenticated: false
       deprecated: false
     headers:
       Content-Type: application/json
       Accept: application/json
-    urlParameters: []
-    cleanUrlParameters: []
+    urlParameters:
+      id:
+        custom: []
+        name: id
+        description: 'The ID of the participant.'
+        required: true
+        example: consequatur
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+    cleanUrlParameters:
+      id: consequatur
     queryParameters: []
     cleanQueryParameters: []
-    bodyParameters: []
-    cleanBodyParameters: []
-    fileParameters: []
-    responses:
-      -
+    bodyParameters:
+      fullname:
         custom: []
-        status: 404
-        content: |-
-          {
-              "message": "The route Lunion-Lab/paroisse-st-sauveur-backend/public/api/programmations could not be found."
-          }
-        headers:
-          cache-control: 'no-cache, private'
-          content-type: application/json
-        description: null
+        name: fullname
+        description: 'Must not be greater than 255 characters.'
+        required: false
+        example: vmqeopfuudtdsufvyvddq
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      email:
+        custom: []
+        name: email
+        description: 'Must be a valid email address. Must not be greater than 255 characters.'
+        required: false
+        example: kunde.eloisa@example.com
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        deprecated: false
+      phone:
+        custom: []
+        name: phone
+        description: 'Must not be greater than 255 characters.'
+        required: false
+        example: hfqcoynlazghdtqtqxbaj
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        deprecated: false
+      message:
+        custom: []
+        name: message
+        description: ''
+        required: false
+        example: consequatur
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        deprecated: false
+      event_id:
+        custom: []
+        name: event_id
+        description: 'The <code>id</code> of an existing record in the events table.'
+        required: false
+        example: 17
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+    cleanBodyParameters:
+      fullname: vmqeopfuudtdsufvyvddq
+      email: kunde.eloisa@example.com
+      phone: hfqcoynlazghdtqtqxbaj
+      message: consequatur
+      event_id: 17
+    fileParameters: []
+    responses: []
     responseFields: []
     auth: []
     controller: null
@@ -4069,40 +4522,41 @@ endpoints:
   -
     custom: []
     httpMethods:
-      - GET
-    uri: api/services
+      - DELETE
+    uri: 'api/participants/{id}'
     metadata:
       custom: []
       groupName: Endpoints
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: 'List services (paginated)'
+      title: ''
       description: ''
       authenticated: false
       deprecated: false
     headers:
       Content-Type: application/json
       Accept: application/json
-    urlParameters: []
-    cleanUrlParameters: []
+    urlParameters:
+      id:
+        custom: []
+        name: id
+        description: 'The ID of the participant.'
+        required: true
+        example: consequatur
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+    cleanUrlParameters:
+      id: consequatur
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
     cleanBodyParameters: []
     fileParameters: []
-    responses:
-      -
-        custom: []
-        status: 404
-        content: |-
-          {
-              "message": "The route Lunion-Lab/paroisse-st-sauveur-backend/public/api/services could not be found."
-          }
-        headers:
-          cache-control: 'no-cache, private'
-          content-type: application/json
-        description: null
+    responses: []
     responseFields: []
     auth: []
     controller: null
